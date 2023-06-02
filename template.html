@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Veri Ekle</title>
+</head>
+<body>
+<h1>Veri Ekle</h1>
+<form action="/add" method="post">
+    <label for="id">ID:</label>
+    <input type="number" id="id" name="id"><br><br>
+    <label for="id2">ID2:</label>
+    <input type="number" id="id2" name="id2"><br><br>
+    <input type="submit" value="Ekle">
+</form>
+<br>
+<h2>Tablo</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>ID2</th>
+    </tr>
+    {{range .}}
+    <tr>
+        <td>{{.ID}}</td>
+        <td>{{.ID2}}</td>
+    </tr>
+    {{end}}
+</table>
+</body>
+</html>
